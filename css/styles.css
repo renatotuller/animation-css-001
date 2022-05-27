@@ -1,0 +1,92 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/* main {
+    height: 100vh;
+}
+
+div {
+    height: 200px;
+    width: 200px;
+    background-color: blue;
+    position:absolute;
+    top: 20px;
+    left: 40px;
+    right: 40px;
+    botton: 20px;
+} */
+
+.container-amarelo{
+height: 500px;
+background-color: yellow;
+}
+
+.container-azul{
+    height: 500px;
+    background-color: blue;
+    position:relative;
+    display: flex;
+    justify-content: center;
+}
+
+.quadrado {
+    height: 400px;
+    width: 80%;
+    background-color: white;
+    position: absolute;
+    top: -200px;
+}
+
+.retangulo {
+    height: 100vh;
+    width: 60px;
+    background-color: green;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index:1;
+    transition: width;
+    transition: 0.3s;
+    transition-timing-function: ease-in;
+    transition-delay: 1s;
+
+    /*Essa linha abaixo representa*/
+    transition: width 0.3 ease-in 1s;
+}
+
+.retangulo:hover{
+    width: 300px;
+}
+
+.retangulo2 {
+    height: 60px;
+    width: 100%;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    /* z-index:2; */
+}
+.quadrado2{
+    width: 200px;
+    height:200px;
+    position:absolute;
+    background-color: pink;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    animation-name: movimentarQuadrado;
+    animation-duration: 4s;
+    animation-iteration-count: /*10*/ infinite;
+}
+
+@keyframes movimentarQuadrado{
+    0% {left: 200px;}
+    25%{left: 400px;}
+    50%{left: 600px;}
+    75%{left: 400px;}
+    100%{left: 200px;}
+}
